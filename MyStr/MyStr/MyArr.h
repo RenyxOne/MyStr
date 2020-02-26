@@ -1,4 +1,6 @@
 #pragma once
+#include <fstream>
+using namespace std;
 template <class T>
 class MyArr
 {
@@ -15,9 +17,15 @@ public:
 
 	int getSize();
 
-	MyArr& operator = (const MyArr& a);
-	MyArr operator + (const MyArr& a);
+	MyArr<T>& operator = (const MyArr<T>& a);
+	MyArr<T> operator + (const MyArr<T>& a);
 	T& operator [] (int k);
+	friend ostream& operator << (ostream& os, MyArr<T>& a)
+	{
+		for (int i = 0; i < a.n; i++)
+			os << a[i] << ' ';
+		return os;
+	}
 };
 
 template<class T>
@@ -49,10 +57,10 @@ inline MyArr<T>::MyArr(T* a, int n)
 }
 
 template<class T>
-inline MyArr<T>::MyArr(const MyArr& a)
+inline MyArr<T>::MyArr(const MyArr<T>& a)
 {
-	n = a.n;
-	
+	arr = new T[a.n];
+	copy(a.arr, a.n);
 }
 
 template<class T>
@@ -70,7 +78,7 @@ inline MyArr<T>::~MyArr()
 }
 
 template<class T>
-inline MyArr& MyArr<T>::operator=(const MyArr &a)
+inline MyArr<T>& MyArr<T>::operator=(const MyArr<T> &a)
 {
 	if (arr) delete[] arr;
 	arr = new T[n];
@@ -79,7 +87,7 @@ inline MyArr& MyArr<T>::operator=(const MyArr &a)
 }
 
 template<class T>
-inline MyArr MyArr<T>::operator+(const MyArr& a)
+inline MyArr<T> MyArr<T>::operator+(const MyArr<T>& a)
 {
 	MyArr New(n + a.n);
 	for (int i = 0; i < n; i++)
