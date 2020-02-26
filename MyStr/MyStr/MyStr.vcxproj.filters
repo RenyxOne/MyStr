@@ -21,9 +21,15 @@
     <ClCompile Include="MyStr.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="MyArr.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyStr.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MyArr.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
