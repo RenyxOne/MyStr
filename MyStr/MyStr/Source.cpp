@@ -1,6 +1,7 @@
 #include <iostream>
 #include "MyStr.h"
 #include "MyArr.h"
+#include "MyStack.h"
 template <class T>
 void BubbleSort(T* a, int n)
 {
@@ -32,9 +33,17 @@ int main()
 	//BubbleSort(arr1, 3);
 	//for (int i = 0; i < 3; i++)
 	//	cout << arr1[i] << ' ';
-	int n = 10;
-	MyArr<int> a1(n);
-	for (int i = 0; i < n; i++)
-		a1[i] = i;
-	std::cout << a1;
+	//int n = 10;
+	//MyArr<int> a1(n);
+	//for (int i = 0; i < n; i++)
+	//	a1[i] = i;
+	//std::cout << a1;
+	MyStack<int> stack;
+	stack.push(1);
+	stack.push(2);
+	int k = stack.pop();
+	std::cout << std::endl << k << std::endl;
+	
+	return 0;
+
 }

@@ -12,7 +12,11 @@ public:
 	MyArr(T* a, int n);
 	MyArr(const MyArr& a);
 	MyArr(int n);
-
+	void setN(int n) {
+		if (arr) delete[] arr;
+		this->n = n;
+		arr = new T[n];
+	}
 	~MyArr();
 
 	int getSize();
@@ -20,6 +24,7 @@ public:
 	MyArr<T>& operator = (const MyArr<T>& a);
 	MyArr<T> operator + (const MyArr<T>& a);
 	T& operator [] (int k);
+	//T operator[] (int k) { return arr[k]; }
 	friend ostream& operator << (ostream& os, MyArr<T>& a)
 	{
 		for (int i = 0; i < a.n; i++)

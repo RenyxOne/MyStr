@@ -124,11 +124,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="MyArr.cpp" />
+    <ClCompile Include="MyStack.cpp" />
     <ClCompile Include="MyStr.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyArr.h" />
+    <ClInclude Include="MyStack.h" />
     <ClInclude Include="MyStr.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
