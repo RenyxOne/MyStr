@@ -1,5 +1,6 @@
 #pragma once
 #include "MyArr.h"
+
 template <class T>
 class MyStack
 {

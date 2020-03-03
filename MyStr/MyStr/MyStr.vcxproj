@@ -123,6 +123,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cat.cpp" />
+    <ClCompile Include="Dog.cpp" />
+    <ClCompile Include="Interface.cpp" />
     <ClCompile Include="MyArr.cpp" />
     <ClCompile Include="MyQueue.cpp" />
     <ClCompile Include="MyStack.cpp" />
@@ -130,6 +133,9 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cat.h" />
+    <ClInclude Include="Dog.h" />
+    <ClInclude Include="Interface.h" />
     <ClInclude Include="MyArr.h" />
     <ClInclude Include="MyQueue.h" />
     <ClInclude Include="MyStack.h" />

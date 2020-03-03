@@ -2,6 +2,11 @@
 #include "MyStr.h"
 #include "MyArr.h"
 #include "MyStack.h"
+#include "MyQueue.h"
+
+#include "Interface.h"
+#include "Cat.h"
+#include "Dog.h"
 template <class T>
 void BubbleSort(T* a, int n)
 {
@@ -38,12 +43,22 @@ int main()
 	//for (int i = 0; i < n; i++)
 	//	a1[i] = i;
 	//std::cout << a1;
-	MyStack<int> stack;
-	stack.push(1);
-	stack.push(2);
-	int k = stack.pop();
-	std::cout << std::endl << k << std::endl;
-	
+	MyQueue<int> Q;
+	//Interface<int>* Q = new MyQueue<int>;
+
+	/*int n = 15;
+	for (int i = 0; i < n; i++)
+		Q.push(i);
+		
+
+	for (int i = 0; i < n; i++)
+	{
+		int t = Q.pop();
+		cout << t << endl;
+	} */
+	Interface* s = new Dog;
+	s->say();
+
 	return 0;
 
 }
